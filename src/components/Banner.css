@@ -1,0 +1,56 @@
+/* src/components/Banner.css */
+
+.banner {
+  display: flex; /* Sử dụng Flexbox để căn chỉnh các hình ảnh nằm ngang hàng */
+  width: 100%;
+  height: 550px; /* Kích thước của banner, điều chỉnh theo nhu cầu */
+  overflow: hidden;
+}
+
+.banner-image {
+  margin-left: 20px;
+  width: 56%; /* Đặt chiều rộng hình ảnh đầu tiên chiếm 56% */
+  height: 100%; /* Đảm bảo hình ảnh phủ đầy chiều cao của banner */
+  object-fit: cover; /* Đảm bảo hình ảnh bao phủ toàn bộ khu vực mà không bị biến dạng */
+  border-radius: 10px; /* Bo tròn các góc của hình ảnh */
+  margin-right: 40px;
+}
+
+.banner-2-image {
+  width: 40%; /* Đặt chiều rộng hình ảnh thứ hai chiếm 40% */
+  height: 100%; /* Đảm bảo hình ảnh phủ đầy chiều cao của banner */
+  object-fit: cover; /* Đảm bảo hình ảnh bao phủ toàn bộ khu vực mà không bị biến dạng */
+  border-radius: 10px; /* Bo tròn các góc của hình ảnh */
+}
+
+/* Media query cho các màn hình nhỏ hơn */
+@media (max-width: 768px) {
+  .banner {
+    height: 300px; /* Kích thước chiều cao của banner cho các màn hình nhỏ */
+    flex-direction: column; /* Đặt các hình ảnh nằm theo chiều dọc trên các màn hình nhỏ */
+    
+  }
+
+  .banner-image, .banner-2-image {
+    width: 100%; /* Đặt chiều rộng hình ảnh chiếm toàn bộ chiều rộng của banner */
+    height: 40%; /* Chiều cao hình ảnh giảm xuống còn 50% chiều cao của banner */
+    margin: 20px; /* Loại bỏ khoảng cách giữa các hình ảnh */
+  }
+
+  .banner-image {
+    margin-bottom: 10px; /* Khoảng cách giữa hai hình ảnh khi nằm dọc */
+    margin: 20px;
+  }
+}
+
+/* Media query cho các màn hình rất nhỏ như điện thoại di động */
+@media (max-width: 480px) {
+  .banner {
+    height: 200px; /* Kích thước chiều cao của banner cho các màn hình rất nhỏ */
+    margin: 20px;
+  }
+
+  .banner-image, .banner-2-image {
+    height: 50%; /* Chiều cao hình ảnh giảm xuống còn 50% chiều cao của banner */
+  }
+}
